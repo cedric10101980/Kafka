@@ -1,0 +1,9 @@
+
+spring:
+  application:
+    name: Kafka Client APIs
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/testdb
+  liquibase:
+    change-log: classpath:/db/changelog/db.changelog-master.yaml

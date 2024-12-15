@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Cedric DSouza
+      changes:
+        - createCollection:
+              collectionName: db-operations-kafka
+        - createTable:
+            tableName: Employee
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+        - insert:
+            collectionName: employee
+            document:
+              id: 1
+              name: "John Doe"
